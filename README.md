@@ -1,4 +1,4 @@
-# How to make Stata graphs with colour gradients 
+# How to make graphs with colour gradients in Stata 18
 
 This is an example of the code needed to create a Stata bar chart with conditional colouring of the plotted bars. 
 
