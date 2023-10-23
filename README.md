@@ -45,13 +45,13 @@ The same command using the do-file syntax:
     net install plottabs, from("https://raw.githubusercontent.com/jankabatek/plotsuite/master/ado/") replace
     ssc install schemepack
      
-    plotmeans FEE_CHANGE, over(id) clear gr(bar) ci(off)                             /// plotmeans options
-       colorvar(y_val1) colorstart(red) colorend(lime)                               /// essential colour gradient options (note the different variable in colorvar - this is because plotmeans stores the plotted data in a separate frame with standardized variable names) 
-       colorcuts(-75(1)75)                                                           /// finer gradient options. Try adding: colorrule(lin)
-       clegend(off)                                                                  /// getting rid of the colour legend (it's messy)
-       barwidth(0.9)                                                                 /// making the bars look nicer 
-       scheme(white_tableau)                                                         /// nicer scheme, thx to Asjad 
-       horizontal ylabel(1(1)27,val labs(small)) ytitle("")                          /// twoway options
+    plotmeans FEE_CHANGE, over(id) clear gr(bar) ci(off)                    /// plotmeans options
+       colorvar(y_val1) colorstart(red) colorend(lime)                      /// essential colour gradient options (note the different variable in colorvar - this is because plotmeans stores the plotted data in a separate frame with standardized variable names) 
+       colorcuts(-75(1)75)                                                  /// finer gradient options. Try adding: colorrule(lin)
+       clegend(off)                                                         /// getting rid of the colour legend (it's messy)
+       barwidth(0.9)                                                        /// making the bars look nicer 
+       scheme(white_tableau)                                                /// nicer scheme, thx to Asjad 
+       horizontal ylabel(1(1)27,val labs(small)) ytitle("")                 /// twoway options
        xtitle("Change in student fees (%)") xlabel(-75(25)125) name(GRDNT2,replace)  
 
 ## Coefplot
@@ -76,12 +76,12 @@ The same command using the do-file syntax:
      
     reg FEE_CHANGE ibn.id, nocons
 
-    coefplot, recast(bar) grid(between glpattern(solid) glcolor(gs15))               /// coefplot options (incl. nicer horizontal grid lines)
-       colorvar(FEE_CHANGE) colorstart(red) colorend(lime)                               /// essential colour gradient options 
-       colorcuts(-75(1)75)                                                           /// finer gradient options. Try adding: colorrule(lin)
-       clegend(off)                                                                  /// getting rid of the colour legend (it's messy)
-       barwidth(0.9)                                                                 /// making the bars look nicer  
-       scheme(white_tableau)                                                         /// nicer scheme, thx to Asjad 
+    coefplot, recast(bar) grid(between glpattern(solid) glcolor(gs15))      /// coefplot options (incl. nicer horizontal grid lines)
+       colorvar(FEE_CHANGE) colorstart(red) colorend(lime)                  /// essential colour gradient options 
+       colorcuts(-75(1)75)                                                  /// finer gradient options. Try adding: colorrule(lin)
+       clegend(off)                                                         /// getting rid of the colour legend (it's messy)
+       barwidth(0.9)                                                        /// making the bars look nicer  
+       scheme(white_tableau)                                                /// nicer scheme, thx to Asjad 
        xtitle("Change in student fees (%)") xlabel(-75(25)125) name(GRDNT3,replace)  
 
 
