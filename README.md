@@ -2,7 +2,7 @@
 
 This is an example of the code needed to create a Stata bar chart with conditional colouring of the plotted bars. 
 
-![Picture](figures/GRDNT3.png) 
+![Picture](Figures/GRDNT3.png) 
 
 Note: **colour gradients were introduced only in Stata 18**. The code will not work with earlier versions of Stata. 
 
