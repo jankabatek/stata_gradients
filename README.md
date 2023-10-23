@@ -65,7 +65,7 @@ We can also make the same chart using the [coefplot]([https://github.com/jankaba
 
     reg FEE_CHANGE ibn.id, nocons
 
-    coefplot, recast(bar) grid(between glpattern(solid) glcolor(gs15)) colorvar(y_val1) colorstart(red) colorend(lime) colorcuts(-75(1)75) clegend(off) barwidth(0.9) scheme(white_tableau)	 xtitle("Change in student fees (%)") xlabel(-75(25)125) name(GRDNT3,replace)  
+    coefplot, recast(bar) grid(between glpattern(solid) glcolor(gs15)) colorvar(FEE_CHANGE) colorstart(red) colorend(lime) colorcuts(-75(1)75) clegend(off) barwidth(0.9) scheme(white_tableau)	 xtitle("Change in student fees (%)") xlabel(-75(25)125) name(GRDNT3,replace)  
         
 The same command using the do-file syntax: 
 
@@ -77,7 +77,7 @@ The same command using the do-file syntax:
     reg FEE_CHANGE ibn.id, nocons
 
     coefplot, recast(bar) grid(between glpattern(solid) glcolor(gs15))               /// coefplot options (incl. nicer horizontal grid lines)
-       colorvar(y_val1) colorstart(red) colorend(lime)                               /// essential colour gradient options 
+       colorvar(FEE_CHANGE) colorstart(red) colorend(lime)                               /// essential colour gradient options 
        colorcuts(-75(1)75)                                                           /// finer gradient options. Try adding: colorrule(lin)
        clegend(off)                                                                  /// getting rid of the colour legend (it's messy)
        barwidth(0.9)                                                                 /// making the bars look nicer  
